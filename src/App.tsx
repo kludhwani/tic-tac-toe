@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { RefreshCw, Award, Trash2 } from 'lucide-react';
-import Board from './components/Board';
-import ScoreBoard from './components/ScoreBoard';
-import GameHistory from './components/GameHistory';
+import Board from './components/Tictactoe/Board';
+import ScoreBoard from './components/Tictactoe/ScoreBoard';
+import GameHistory from './components/Tictactoe/GameHistory';
 import { calculateWinner, checkDraw } from './utils/gameLogic';
 
 type HistoryItem = {
