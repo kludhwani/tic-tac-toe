@@ -7,9 +7,11 @@ interface ScoreBoardProps {
     O: number;
     draws: number;
   };
+  player1: string;
+  player2: string;
 }
 
-const ScoreBoard: React.FC<ScoreBoardProps> = ({ scores }) => {
+const ScoreBoard: React.FC<ScoreBoardProps> = ({ scores, player1, player2 }) => {
   return (
     <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
       <h2 className="text-lg font-semibold text-gray-800 mb-3 flex items-center gap-2">
@@ -21,7 +23,7 @@ const ScoreBoard: React.FC<ScoreBoardProps> = ({ scores }) => {
         <div className="flex justify-between items-center p-2 bg-indigo-50 rounded">
           <div className="flex items-center gap-2">
             <User className="h-4 w-4 text-indigo-600" />
-            <span className="font-medium">Naina</span>
+            <span className="font-medium">{player1}</span>
           </div>
           <span className="text-lg font-bold text-indigo-600">{scores.X}</span>
         </div>
@@ -29,7 +31,7 @@ const ScoreBoard: React.FC<ScoreBoardProps> = ({ scores }) => {
         <div className="flex justify-between items-center p-2 bg-purple-50 rounded">
           <div className="flex items-center gap-2">
             <User className="h-4 w-4 text-purple-600" />
-            <span className="font-medium">Jaksh</span>
+            <span className="font-medium">{player2}</span>
           </div>
           <span className="text-lg font-bold text-purple-600">{scores.O}</span>
         </div>
